@@ -1,3 +1,7 @@
+import { FaInstagram } from 'react-icons/fa';
+import { IoCallOutline } from 'react-icons/io5';
+import { MdOutlineMailOutline } from 'react-icons/md';
+
 export default function Home() {
   return (
     <div className='font-sans flex flex-col items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20'>
@@ -130,12 +134,21 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className='flex flex-col gap-4 max-w-3xl'>
+        <section className='flex flex-col gap-4 max-w-3xl w-full'>
           <h2 className='text-2xl font-bold'>CONTACT US</h2>
-          <ul>
-            <li className='text-lg font-medium'>Phone</li>
-            <li className='text-lg font-medium'>Email</li>
-            <li className='text-lg font-medium'>Insta</li>
+          <ul className='flex justify-between'>
+            <li className='text-lg font-medium flex justify-between items-center gap-4'>
+              <IoCallOutline size={24} />
+              970.409.9957
+            </li>
+            <li className='text-lg font-medium flex justify-between items-center gap-4'>
+              <MdOutlineMailOutline size={24} />
+              coastalconcierge805@gmail.com
+            </li>
+            <li className='text-lg font-medium flex justify-between items-center gap-4'>
+              <FaInstagram size={24} />
+              @coastalconcierge805
+            </li>
           </ul>
           <h2 className='text-2xl font-bold'>Your life, simplified.</h2>
         </section>
