@@ -5,19 +5,17 @@ export default function Header() {
     <div className='relative'>
       {/* Full-width image bar at the top */}
       <div
+        className='w-screen h-[250px] sm:h-[300px] md:h-[350px] z-0 overflow-hidden'
         style={{
           backgroundImage: "url('/assets/IMG_0445.JPG')",
-          backgroundSize: 'fill',
-          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          backgroundPosition: '50% 20%', // example fine-grained
           backgroundRepeat: 'no-repeat',
-          width: '100vw',
-          height: '250px', // adjust height as needed
           position: 'relative',
           left: '50%',
           right: '50%',
           marginLeft: '-50vw',
           marginRight: '-50vw',
-          zIndex: 0,
         }}
       />
       {/* Centered logo below the image bar, overlapping with Tailwind */}
