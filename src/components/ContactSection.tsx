@@ -10,7 +10,7 @@ export default function ContactSection({ contacts }: ContactSectionProps) {
       <h2 className='text-lg sm:text-xl md:text-2xl font-bold text-coastal-primary font-sans'>
         CONTACT US
       </h2>
-      <ul className='flex flex-col sm:flex-row gap-6 sm:gap-12'>
+      <ul className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
         {contacts.map(({ href, icon, children, target, rel }) => (
           <ContactLink
             key={children}
@@ -23,7 +23,7 @@ export default function ContactSection({ contacts }: ContactSectionProps) {
           </ContactLink>
         ))}
       </ul>
-      <h2 className='text-md sm:text-lg md:text-xl font-medium font-serif'>
+      <h2 className='text-md sm:text-lg md:text-xl font-medium font-serif pt-4'>
         Your life, simplified.
       </h2>
     </div>
@@ -36,7 +36,7 @@ function ContactLink({ href, icon, children, ...props }: Contact) {
       <a
         href={href}
         {...props}
-        className='text-lg font-semibold flex justify-between items-center gap-2 text-coastal-secondary hover:text-coastal-primary transition-colors duration-200 cursor-pointer'
+        className='text-md sm:text-lg font-semibold flex justify-start items-center gap-2 md:gap-12 text-coastal-secondary hover:text-coastal-primary transition-colors duration-200 cursor-pointer'
       >
         {icon}
         {children}

@@ -1,5 +1,5 @@
 import type { Contact, Package, Service } from '@/app/types';
-import { FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaInstagram } from 'react-icons/fa';
 import { IoCallOutline } from 'react-icons/io5';
 import { MdOutlineMailOutline } from 'react-icons/md';
 
@@ -45,6 +45,13 @@ export const contacts: Contact[] = [
     href: 'https://instagram.com/coastalconcierge805',
     icon: <FaInstagram size={24} />,
     children: '@coastalconcierge805',
+    target: '_blank',
+    rel: 'noopener noreferrer',
+  },
+  {
+    href: 'https://www.facebook.com/profile.php?id=61582232960760',
+    icon: <FaFacebook size={24} />,
+    children: 'Coastal Concierge',
     target: '_blank',
     rel: 'noopener noreferrer',
   },

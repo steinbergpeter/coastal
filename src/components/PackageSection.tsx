@@ -11,7 +11,7 @@ export default function PackageSection({ packages }: PackageSectionProps) {
         PACKAGES AT A GLANCE
       </h2>
       {packages && packages.length > 0 && (
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
           {packages.map(({ title, price, description }) => (
             <PackageCard
               key={title}
