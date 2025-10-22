@@ -16,6 +16,7 @@ export default function Header() {
           right: '50%',
           marginLeft: '-50vw',
           marginRight: '-50vw',
+          filter: 'brightness(75%) contrast(200%) saturate(140%)',
         }}
       />
       {/* Centered logo below the image bar, overlapping with Tailwind */}
