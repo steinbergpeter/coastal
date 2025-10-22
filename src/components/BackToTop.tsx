@@ -12,10 +12,10 @@ export default function BackToTop() {
       </h2>
       <button
         onClick={scrollToTop}
-        className='mt-4 mb-4 px-3 py-1 bg-coastal-primary/90 text-white font-semibold text-sm rounded-full shadow-lg hover:bg-coastal-secondary/90 transition-colors'
+        className='mt-4 mb-12 px-3 py-2 bg-coastal-primary/60 font-semibold rounded-full shadow-lg hover:bg-coastal-secondary/60 transition-colors text-2xl'
         aria-label='Back to Top'
       >
-        Back to Top
+        🔝
       </button>
     </>
   );
