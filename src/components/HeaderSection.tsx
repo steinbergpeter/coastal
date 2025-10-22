@@ -6,7 +6,7 @@ export default function Header() {
       {/* Full-width image bar at the top */}
       <div
         style={{
-          backgroundImage: "url('/assets/IMG_1359.JPG')",
+          backgroundImage: "url('/assets/IMG_0445.JPG')",
           backgroundSize: 'fill',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
