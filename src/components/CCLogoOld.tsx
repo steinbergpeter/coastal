@@ -3,13 +3,12 @@ import Image from 'next/image';
 
 export default function CCLogo({ className = '' }: { className?: string }) {
   return (
-    <div className={`relative ${className}`}>
+    <div className={`relative w-full min-h-80 ${className}`}>
       <Image
-        width={1000}
-        height={1000}
-        src='/assets/CoastalLogoEdited.fig.svg'
+        src='/assets/CoastalLogoMod.svg'
         alt='Coastal Concierge Logo'
-        className='object-center'
+        fill
+        className='object-cover'
         priority
       />
     </div>
