@@ -28,7 +28,7 @@ export default function PackageSection({ packages }: PackageSectionProps) {
 
 function PackageCard({ title, price, description }: Package) {
   return (
-    <div className='bg-white p-6 rounded-lg shadow-md border border-gray-200'>
+    <div className='bg-white/60 p-6 rounded-lg shadow-md border border-gray-200'>
       <h3 className='text-lg font-bold mb-2 font-serif text-coastal-secondary'>
         {title}
       </h3>

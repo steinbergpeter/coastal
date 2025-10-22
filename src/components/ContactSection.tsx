@@ -10,22 +10,21 @@ export default function ContactSection({ contacts }: ContactSectionProps) {
       <h2 className='text-lg sm:text-xl md:text-2xl font-bold text-coastal-primary font-sans'>
         CONTACT US
       </h2>
-      <ul className='grid grid-cols-1 md:grid-cols-2 gap-2'>
-        {contacts.map(({ href, icon, children, target, rel }) => (
-          <ContactLink
-            key={children}
-            href={href}
-            icon={icon}
-            target={target}
-            rel={rel}
-          >
-            {children}
-          </ContactLink>
-        ))}
-      </ul>
-      <h2 className='text-md sm:text-lg md:text-xl font-medium font-serif pt-4'>
-        Your life, simplified.
-      </h2>
+      <div className='flex flex-col gap-4 justify-start items-center'>
+        <ul className='grid grid-cols-1 md:grid-cols-2 gap-2'>
+          {contacts.map(({ href, icon, children, target, rel }) => (
+            <ContactLink
+              key={children}
+              href={href}
+              icon={icon}
+              target={target}
+              rel={rel}
+            >
+              {children}
+            </ContactLink>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
