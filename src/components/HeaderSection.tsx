@@ -33,7 +33,7 @@ export default function Header() {
         className='absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 z-10 
       bg-white rounded-2xl overflow-hidden flex justify-center items-center
         w-64 xs:w-80 sm:w-96 md:w-[28rem] lg:w-[32rem]
-        [box-shadow:8px_-8px_10px_0_rgba(0,0,0,0.15)]
+        [box-shadow:8px_-8px_10px_0_rgba(0,0,0,0.14)]
         '
       >
         <CCLogo />
