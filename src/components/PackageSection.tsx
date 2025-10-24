@@ -12,13 +12,8 @@ export default function PackageSection({ packages }: PackageSectionProps) {
       </h2>
       {packages && packages.length > 0 && (
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
-          {packages.map(({ title, price, description }) => (
-            <PackageCard
-              key={title}
-              title={title}
-              price={price}
-              description={description}
-            />
+          {packages.map((pack) => (
+            <PackageCard key={pack.title} {...pack} />
           ))}
         </div>
       )}
@@ -26,14 +21,14 @@ export default function PackageSection({ packages }: PackageSectionProps) {
   );
 }
 
-function PackageCard({ title, price, description }: Package) {
+function PackageCard(pack: Package) {
   return (
     <div className='bg-white/60 p-6 rounded-lg shadow-md border border-gray-200'>
       <h3 className='text-lg font-bold mb-2 font-serif text-coastal-secondary'>
-        {title}
+        {pack.title}
       </h3>
-      <p className='text-lg font-medium mb-3'>{price}</p>
-      <p className='text-gray-600 mb-4'>{description}</p>
+      <p className='text-lg font-medium mb-3'>{pack.price}</p>
+      <p className='text-gray-600 mb-4'>{pack.description}</p>
     </div>
   );
 }

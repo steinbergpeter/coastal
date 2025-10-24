@@ -12,15 +12,9 @@ export default function ContactSection({ contacts }: ContactSectionProps) {
       </h2>
       <div className='flex flex-col gap-4 justify-start items-center'>
         <ul className='grid grid-cols-1 md:grid-cols-2 gap-2'>
-          {contacts.map(({ href, icon, children, target, rel }) => (
-            <ContactLink
-              key={children}
-              href={href}
-              icon={icon}
-              target={target}
-              rel={rel}
-            >
-              {children}
+          {contacts.map((contact) => (
+            <ContactLink key={contact.children} {...contact}>
+              {contact.children}
             </ContactLink>
           ))}
         </ul>
@@ -29,16 +23,15 @@ export default function ContactSection({ contacts }: ContactSectionProps) {
   );
 }
 
-function ContactLink({ href, icon, children, ...props }: Contact) {
+function ContactLink(contact: Contact) {
   return (
     <li>
       <a
-        href={href}
-        {...props}
+        {...contact}
         className='text-md sm:text-lg font-semibold flex justify-start items-center gap-2 md:gap-6 text-coastal-secondary hover:text-coastal-primary transition-colors duration-200 cursor-pointer'
       >
-        {icon}
-        {children}
+        {contact.icon}
+        {contact.children}
       </a>
     </li>
   );

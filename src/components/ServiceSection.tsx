@@ -12,21 +12,23 @@ export default function ServiceSection({ services }: ServiceSectionProps) {
         OUR SERVICES
       </h2>
       <ul className='list-decimal list-inside flex flex-col gap-4 sm:gap-6'>
-        {services.map(({ title, description }) => (
-          <ServiceItem key={title} title={title} description={description} />
+        {services.map((service) => (
+          <ServiceItem key={service.title} {...service} />
         ))}
       </ul>
     </div>
   );
 }
 
-function ServiceItem({ title, description }: Service) {
+function ServiceItem(service: Service) {
   return (
     <li className='flex flex-col justify-start items-start'>
       <h3 className='text-md sm:text-lg font-bold text-coastal-secondary font-serif'>
-        {title}
+        {service.title}
       </h3>
-      <p className='text-md sm:text-lg font-medium font-serif'>{description}</p>
+      <p className='text-md sm:text-lg font-medium font-serif'>
+        {service.description}
+      </p>
     </li>
   );
 }
