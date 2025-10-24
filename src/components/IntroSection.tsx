@@ -10,8 +10,8 @@ export default function IntroSection() {
         most valuable resource, we provide the support needed for peace of mind.
         <br />
         <br />
-        With over 30 years of experience across various fields, our team brings
-        depth, versatility, and discretion to every service we provide.
+        With over 30 years of experience across a range of industries, our team
+        brings depth, versatility, and discretion to every service we provide.
         <br />
         <br />
         We take a deeply personalized approach to every client
