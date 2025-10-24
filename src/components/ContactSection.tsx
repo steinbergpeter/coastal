@@ -13,9 +13,7 @@ export default function ContactSection({ contacts }: ContactSectionProps) {
       <div className='flex flex-col gap-4 justify-start items-center'>
         <ul className='grid grid-cols-1 md:grid-cols-2 gap-2'>
           {contacts.map((contact) => (
-            <ContactLink key={contact.children} {...contact}>
-              {contact.children}
-            </ContactLink>
+            <ContactLink key={contact.children} {...contact} />
           ))}
         </ul>
       </div>
