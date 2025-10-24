@@ -15,12 +15,15 @@ export default function Header() {
         }}
       >
         <Image
-          src='/assets/IMG_0445.JPG'
+          src='/assets/IMG_5341.JPG'
           alt='Description of Image'
           layout='fill'
           objectFit='cover'
           objectPosition='50% 20%'
-          style={{ filter: 'brightness(73%) contrast(180%) saturate(140%)' }}
+          style={{
+            filter:
+              'hue-rotate(15deg) brightness(100%) contrast(100%) saturate(150%)',
+          }}
           priority={true}
         />
       </div>
@@ -28,8 +31,9 @@ export default function Header() {
       {/* Centered logo below the image bar, overlapping with Tailwind */}
       <div
         className='absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 z-10 
-        bg-white rounded-2xl overflow-hidden flex justify-center items-center
-          w-64 xs:w-80 sm:w-96 md:w-[28rem] lg:w-[32rem]
+      bg-white rounded-2xl overflow-hidden flex justify-center items-center
+        w-64 xs:w-80 sm:w-96 md:w-[28rem] lg:w-[32rem]
+        [box-shadow:8px_-8px_10px_0_rgba(0,0,0,0.15)]
         '
       >
         <CCLogo />
