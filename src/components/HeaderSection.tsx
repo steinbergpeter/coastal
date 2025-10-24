@@ -15,7 +15,7 @@ export default function Header() {
         }}
       >
         <Image
-          src='/assets/IMG_5341.JPG'
+          src='/assets/IMG_5341.jpg'
           alt='Description of Image'
           layout='fill'
           objectFit='cover'
