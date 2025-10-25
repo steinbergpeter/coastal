@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 
 export default function Header() {
   return (
@@ -14,17 +14,16 @@ export default function Header() {
           marginRight: '-50vw',
         }}
       >
-        <Image
-          src='/assets/IMG_5341.jpg'
+        <ExportedImage
+          src='/assets/istockphoto-2205580357-1024x1024.jpg'
           alt='Description of Image'
-          layout='fill'
-          objectFit='cover'
-          objectPosition='50% 20%'
+          fill
           style={{
-            filter:
-              'hue-rotate(15deg) brightness(100%) contrast(100%) saturate(150%)',
+            objectFit: 'cover',
+            objectPosition: '50% 20%',
           }}
           priority={true}
+          unoptimized
         />
       </div>
 
@@ -33,9 +32,9 @@ export default function Header() {
         className='absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 z-10 
       bg-white rounded-2xl overflow-hidden flex justify-center items-center
         w-64 xs:w-80 sm:w-96 md:w-[28rem] lg:w-[32rem]
-        [box-shadow:8px_-8px_10px_0_rgba(0,0,0,0.14)]
         '
       >
+        {/* [box-shadow:8px_-8px_10px_0_rgba(0,0,0,0.14)] */}
         <CCLogo />
       </div>
     </div>
@@ -44,13 +43,13 @@ export default function Header() {
 
 function CCLogo() {
   return (
-    <Image
+    <ExportedImage
       width={500}
       height={40}
       src='/assets/CoastalLogoEdited.fig.svg'
       alt='Coastal Concierge Logo'
       className='object-center'
-      objectFit='contain'
+      style={{ objectFit: 'contain', width: 'auto', height: 'auto' }}
     />
   );
 }
